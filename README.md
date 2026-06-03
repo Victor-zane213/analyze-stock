@@ -4,17 +4,30 @@
 
 ## 快速开始
 
-### 1. 安装依赖
+### 1. 安装 Skill
 
 ```bash
-pip install -r requirements.txt
+# 克隆到 Claude Code 的 skills 目录
+git clone https://github.com/Victor-zane213/analyze-stock.git \
+  ~/.claude/skills/analyze-stock
+```
+
+> Claude Code 会自动扫描 `~/.claude/skills/` 下的所有目录并加载 SKILL.md。
+
+### 2. 安装 Python 依赖
+
+```bash
+pip install -r ~/.claude/skills/analyze-stock/requirements.txt
 ```
 
 依赖包：`requests`, `pandas`, `pyyaml`, `openai`, `yfinance`, `akshare`
 
-### 2. 配置 LLM
+### 3. 配置 LLM API Key
 
-编辑 `config.yaml` 设置大模型 API（用于产业链分析和故事打分）：
+```bash
+# 编辑配置文件，填入你的 API Key
+vim ~/.claude/skills/analyze-stock/config.yaml
+```
 
 ```yaml
 llm:
@@ -22,17 +35,26 @@ llm:
   providers:
     deepseek:
       base_url: "https://api.deepseek.com"
-      api_key: "你的API Key"
+      api_key: "sk-your-api-key"    # ← 改成你的 DeepSeek Key
       model: deepseek-v4-pro
     dashscope:
       base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
-      api_key: "你的API Key"
+      api_key: "sk-your-api-key"    # ← 或改成阿里千问 Key
       model: qwen-plus
 ```
 
-### 3. 在 Claude Code 中加载 Skill
+> 至少配一个 LLM 即可。不配的话产业链分析和故事打分功能会降级为 WebSearch。
 
-将本目录放入 `~/.claude/skills/` 下，Claude Code 会自动识别。之后在对话中使用触发词即可调用对应分析模式。
+### 4. 重启 Claude Code
+
+关闭并重新启动 Claude Code（或在对话中输入 `/reload`），即可使用。之后直接用自然语言触发：
+
+```
+分析 贵州茅台
+选股
+牛散持仓
+板块排名
+```
 
 ---
 
