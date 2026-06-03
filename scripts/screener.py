@@ -267,9 +267,28 @@ def print_screen_results(results: list[dict], volume_ratio: float = 1.8, jiatuo_
 
 # ── JSON 输出（供后续处理） ────────────────────────────
 
+def _to_native(obj):
+    """递归转换 numpy 类型为 Python 原生类型，确保 JSON 可序列化。"""
+    import numpy as np
+
+    if isinstance(obj, (np.integer,)):
+        return int(obj)
+    if isinstance(obj, (np.floating,)):
+        return float(obj)
+    if isinstance(obj, (np.bool_,)):
+        return bool(obj)
+    if isinstance(obj, np.ndarray):
+        return obj.tolist()
+    if isinstance(obj, dict):
+        return {k: _to_native(v) for k, v in obj.items()}
+    if isinstance(obj, (list, tuple)):
+        return [_to_native(v) for v in obj]
+    return obj
+
+
 def screen_to_json(results: list[dict]) -> str:
     """将筛选结果转为 JSON 字符串。"""
-    return json.dumps(results, ensure_ascii=False, indent=2)
+    return json.dumps(_to_native(results), ensure_ascii=False, indent=2)
 
 
 # ── CLI 入口 ───────────────────────────────────────────
