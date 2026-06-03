@@ -1,0 +1,47 @@
+# A股知名牛散名单配置
+# 可自由增删，每个条目包含 name / description / search_keywords
+# search_keywords 用于 WebSearch 查找最新持仓
+
+niushan:
+  - name: "葛卫东"
+    description: "期货大佬，混沌投资创始人，偏好科技半导体"
+    search_keywords: "葛卫东 最新持仓"
+
+  - name: "章建平"
+    description: "牛散联盟代表人物，偏好医药消费"
+    search_keywords: "章建平 持仓"
+
+  - name: "赵建平"
+    description: "半导体芯片长期投资者"
+    search_keywords: "赵建平 最新持仓"
+
+  - name: "陈发树"
+    description: "新华都创始人，偏好医药新能源"
+    search_keywords: "陈发树 持仓"
+
+  - name: "张素芬"
+    description: "偏好次新股和中小盘"
+    search_keywords: "张素芬 最新持仓"
+
+  - name: "何雪萍"
+    description: "偏好医药大消费"
+    search_keywords: "何雪萍 持仓"
+
+  - name: "吕强"
+    description: "偏好新能源光伏锂电"
+    search_keywords: "吕强 持仓"
+
+  - name: "王孝安"
+    description: "偏好科技新能源"
+    search_keywords: "王孝安 持仓"
+
+  - name: "周宇光"
+    description: "偏好次新股中小盘"
+    search_keywords: "周宇光 最新持仓"
+
+  - name: "李欣"
+    description: "偏好科技通信半导体"
+    search_keywords: "李欣 持仓"
+  - name: "徐开东"
+    description: "偏好周期逆向，困境反转"
+    search_keywords: "徐开东 持仓"

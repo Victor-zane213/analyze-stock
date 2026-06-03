@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# Claude Code internal
+.claude/
+
+# Firecrawl internal
+.firecrawl/
+
+# Personal data
+memory/
+
+# Config with real API keys (users should copy and edit)
+config.local.yaml

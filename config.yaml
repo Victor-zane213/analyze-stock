@@ -1,0 +1,18 @@
+# financial-assistant 配置文件
+
+llm:
+  # 默认使用的服务商（按 providers 中的 key 指定）
+  provider: deepseek
+  temperature: 0.3
+  max_tokens: 2000
+
+  providers:
+    deepseek:
+      base_url: "https://api.deepseek.com"
+      api_key: "sk-your-deepseek-api-key"
+      model: deepseek-v4-pro
+    dashscope:
+      base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+      api_key: "sk-your-dashscope-api-key"
+      # 可选模型：qwen-plus（均衡）、qwen-max（更强但更贵）、qwen-turbo（快速便宜）
+      model: qwen-plus

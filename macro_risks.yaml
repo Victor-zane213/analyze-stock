@@ -1,0 +1,31 @@
+# 宏观风险因子配置
+# 用于模式H三维入场评估的大盘风险过滤
+# 修改后下次分析自动生效，无需重启
+
+# --- 定性风险（手动开关） ---
+war_risk:
+  active: false       # 战争风险（如台海、中东、俄乌等）
+  label: "地缘战争风险"
+  penalty: 10          # 扣分
+
+tariff_risk:
+  active: false       # 关税/贸易战风险
+  label: "关税/贸易战风险"
+  penalty: 8
+
+us_iran_risk:
+  active: true        # 美伊谈判僵局风险
+  label: "美伊谈判僵局"
+  penalty: 6
+
+# --- 定量风险（自动检测） ---
+us10y_yield:
+  enabled: true        # 是否自动检测美国10年期国债收益率
+  threshold_warn: 4.5  # 超过此值开始扣分（%）
+  threshold_severe: 5.0  # 超过此值加重扣分（%）
+  penalty_warn: 6      # warn档扣分
+  penalty_severe: 10   # severe档扣分
+  label: "美10年期国债收益率{value}%"
+
+# --- 风险扣分上限 ---
+max_total_penalty: 20  # 宏观风险单次最多扣20分

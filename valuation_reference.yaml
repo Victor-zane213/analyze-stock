@@ -1,0 +1,149 @@
+# Valuation Reference Data for financial-assistant
+# Edit these values to keep up with market conditions.
+# All values are approximate industry/sector medians.
+
+# ─── A-Share Industries ───
+a_share_sectors:
+  白酒:
+    pe: 25.0
+    pb: 8.0
+    note: "高端白酒溢价高"
+  半导体:
+    pe: 50.0
+    pb: 5.0
+    note: "成长估值，波动大"
+  新能源:
+    pe: 30.0
+    pb: 3.5
+    note: "光伏/锂电分化"
+  锂电池:
+    pe: 25.0
+    pb: 3.0
+    note: "产能过剩压力"
+  医药:
+    pe: 35.0
+    pb: 4.0
+    note: "创新药溢价，仿制药折价"
+  银行:
+    pe: 6.0
+    pb: 0.7
+    note: "低估值常态"
+  保险:
+    pe: 12.0
+    pb: 1.5
+  券商:
+    pe: 18.0
+    pb: 1.5
+    note: "周期性强"
+  房地产:
+    pe: 10.0
+    pb: 0.8
+    note: "行业下行"
+  电力:
+    pe: 20.0
+    pb: 2.0
+    note: "稳定分红"
+  汽车:
+    pe: 25.0
+    pb: 2.5
+    note: "新能源车高增"
+  军工:
+    pe: 50.0
+    pb: 4.0
+    note: "国防预算驱动"
+  通信:
+    pe: 20.0
+    pb: 2.0
+  软件:
+    pe: 45.0
+    pb: 5.0
+    note: "信创概念"
+  消费:
+    pe: 30.0
+    pb: 5.0
+    note: "品牌消费溢价"
+  家电:
+    pe: 15.0
+    pb: 3.0
+  煤炭:
+    pe: 8.0
+    pb: 1.2
+    note: "高分红低估值"
+  有色:
+    pe: 20.0
+    pb: 2.5
+    note: "周期性波动"
+  钢铁:
+    pe: 12.0
+    pb: 0.9
+    note: "产能过剩"
+  建筑材料:
+    pe: 15.0
+    pb: 1.5
+  交通运输:
+    pe: 18.0
+    pb: 1.8
+  农业:
+    pe: 25.0
+    pb: 3.0
+  传媒:
+    pe: 25.0
+    pb: 2.5
+
+# ─── US Stock Sectors ───
+us_sectors:
+  Technology:
+    pe: 28.0
+    ev_ebitda: 18.0
+    wacc: 0.10
+    note: "Mag7溢价，软件/SaaS更高"
+  "Consumer Cyclical":
+    pe: 22.0
+    ev_ebitda: 12.0
+    wacc: 0.09
+    note: "汽车/零售周期性强"
+  "Financial Services":
+    pe: 14.0
+    ev_ebitda: 10.0
+    wacc: 0.08
+    note: "银行/保险，利率敏感"
+  Healthcare:
+    pe: 24.0
+    ev_ebitda: 15.0
+    wacc: 0.08
+    note: "制药/器械，管线驱动"
+  Industrials:
+    pe: 20.0
+    ev_ebitda: 13.0
+    wacc: 0.09
+    note: "制造业/航天/运输"
+  Energy:
+    pe: 12.0
+    ev_ebitda: 7.0
+    wacc: 0.10
+    note: "油气，油价驱动"
+  "Basic Materials":
+    pe: 15.0
+    ev_ebitda: 8.0
+    wacc: 0.09
+    note: "钢铁/化工/矿产"
+  "Real Estate":
+    pe: 35.0
+    ev_ebitda: 20.0
+    wacc: 0.07
+    note: "REITs，FFO估值更常用"
+  Utilities:
+    pe: 18.0
+    ev_ebitda: 12.0
+    wacc: 0.06
+    note: "低风险，稳定分红"
+  "Communication Services":
+    pe: 20.0
+    ev_ebitda: 10.0
+    wacc: 0.09
+    note: "电信/媒体/互联网"
+  "Consumer Defensive":
+    pe: 22.0
+    ev_ebitda: 14.0
+    wacc: 0.07
+    note: "必需消费，防御性"
