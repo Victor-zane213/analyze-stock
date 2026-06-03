@@ -1,0 +1,42 @@
+{
+  "name": "analyze-stock",
+  "version": "1.0.0",
+  "description": "A股/美股股票分析助手 — Claude Code skill for A-share & US stock analysis",
+  "author": "Victor-zane213",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "claude-code-skill",
+    "skill",
+    "stock",
+    "finance",
+    "a-share",
+    "us-stock",
+    "investment",
+    "quantitative"
+  ],
+  "bin": {
+    "analyze-stock": "./install.js"
+  },
+  "files": [
+    "SKILL.md",
+    "install.js",
+    "scripts/",
+    "config.yaml",
+    "macro_risks.yaml",
+    "niushan.yaml",
+    "sectors.yaml",
+    "valuation_reference.yaml",
+    "requirements.txt",
+    "financial.md",
+    "docs/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Victor-zane213/analyze-stock.git"
+  },
+  "homepage": "https://github.com/Victor-zane213/analyze-stock#readme",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

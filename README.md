@@ -7,25 +7,18 @@
 ### 1. 安装 Skill
 
 ```bash
-# 克隆到 Claude Code 的 skills 目录
-git clone https://github.com/Victor-zane213/analyze-stock.git \
-  ~/.claude/skills/analyze-stock
+npx analyze-stock
 ```
 
-> Claude Code 会自动扫描 `~/.claude/skills/` 下的所有目录并加载 SKILL.md。
+> 自动安装到 `~/.claude/skills/analyze-stock/`，同时安装 Python 依赖。
+>
+> 安装到项目目录：`npx analyze-stock --project`（安装到 `.claude/skills/`）
+>
+> 或手动克隆：`git clone https://github.com/Victor-zane213/analyze-stock.git ~/.claude/skills/analyze-stock`
 
-### 2. 安装 Python 依赖
-
-```bash
-pip install -r ~/.claude/skills/analyze-stock/requirements.txt
-```
-
-依赖包：`requests`, `pandas`, `pyyaml`, `openai`, `yfinance`, `akshare`
-
-### 3. 配置 LLM API Key
+### 2. 配置 LLM API Key
 
 ```bash
-# 编辑配置文件，填入你的 API Key
 vim ~/.claude/skills/analyze-stock/config.yaml
 ```
 
